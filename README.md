@@ -12,4 +12,4 @@ Senior Product Designer and Design Leader. Focused on product discovery, custome
 ## Blog
 
 A collection of my thoughts on customer-centricity, product innovation, design leadership, and team management. 
-[Read posts (Temporary Google Docs link)](https://docs.google.com/document/d/1l7fhAoUzRCSG0DfoOaxaaXgVyq6U2ZrXdh5UkBy-vCI/edit?tab=t.ethcz2ld0wbh)
+[Read posts (Google Docs link)](https://docs.google.com/document/d/1l7fhAoUzRCSG0DfoOaxaaXgVyq6U2ZrXdh5UkBy-vCI/edit?tab=t.ethcz2ld0wbh)
