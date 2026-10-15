@@ -5,7 +5,7 @@ Senior Product Designer and Design Leader. Focused on product discovery, custome
 ## Projects
 
 * **[TreeLine](https://hseeberg.github.io/TreeLine)** – Family tree visualization tool.
-* **[Data Analysis: Ride-hailing](https://hseeberg.github.io/ride-hailing/) – Processing and analyzing ride-hailing data.
+* **[Data Analysis: Ride-hailing](https://hseeberg.github.io/ride-hailing/)** – Processing and analyzing ride-hailing data.
 * **Portfolio** – *Coming soon*
 * **Car Design Project** – *Coming soon*
 
