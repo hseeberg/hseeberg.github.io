@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="version" content="V0.1.46">
+<title>Hannes Seeberg — Product designer</title>
+<meta name="description" content="Hands-on product designer. Design, analysis, AI and prototypes in code.">
+<meta property="og:title" content="Hannes Seeberg — Product designer">
+<meta property="og:description" content="Hands-on product designer. Design, analysis, AI and prototypes in code.">
+<style>
+  :root {
+    --ink: #161616;
+    --mid: #4f4f4f;
+    --line: #b5b5b5;
+    --box: #ececec;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { min-height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"), linear-gradient(160deg, #cddae5 0%, #e9eef2 35%, #f0ebe4 65%, #e2d3c0 100%); }
+  /* Grid: body type = 1 unit. Line = 28px (--u). All spacing = multiples of --u.
+     Type scale = silver ratio (1 : 1.414): 17, 24, 34, 48 px. Measure = 40 characters wide column.
+     Placement asymmetric: left margin : right margin = 1 : 1.414. Rules: 2px ink (section) / 0.5px ink (item). */
+  :root { --u: 28px; --s1: 17px; --s2: 24px; --s3: 34px; --s4: 48px; --col: 680px; }
+  body {
+    margin: 0; background: transparent; color: var(--ink);
+    font: var(--s1)/var(--u) "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--ink); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  main, footer {
+    width: min(var(--col), 100% - 2 * var(--u));
+    margin-left: max(var(--u), (100% - var(--col)) * 0.4142);
+  }
+  main { padding: calc(var(--u) * 4) 0 0; }
+  section { margin-top: calc(var(--u) * 4); }
+  p { margin: 0 0 calc(var(--u) / 2); }
+  .name { font-weight: 700; margin: 0 0 var(--u); }
+  h1 { font-size: clamp(var(--s3), 8vw, var(--s4)); line-height: 1.17; letter-spacing: -0.02em; margin: 0 0 var(--u); font-weight: 700; }
+  .lead { font-size: var(--s2); line-height: calc(var(--u) * 1.25); max-width: 30em; margin: 0; }
+  h2 { font-size: var(--s1); line-height: var(--u); font-weight: 700; margin: 0 0 var(--u); padding-bottom: calc(var(--u) / 4); border-bottom: 2px solid var(--ink); }
+
+  /* Impact */
+  .impact { list-style: none; padding: 0; margin: 0; }
+  .impact li { display: grid; grid-template-columns: 9em 1fr; gap: var(--u); align-items: baseline; padding: calc(var(--u) / 2) 0; border-bottom: 0.5px solid var(--ink); }
+  .impact li:first-child { padding-top: 0; }
+  .impact .num { font-size: var(--s3); font-weight: 700; line-height: calc(var(--u) * 1.5); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .impact p { margin: 0; }
+
+  /* Recent work */
+  .work { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--u); }
+  .work article { min-width: 0; }
+  .work a { text-decoration: none; display: block; }
+  .work img { width: 100%; max-width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; display: block; background: var(--box); outline: 0.5px solid rgba(22,22,22,.35); }
+  .work h3 { font-size: var(--s1); line-height: var(--u); margin: calc(var(--u) / 2) 0 0; }
+  .work a:hover h3, .work a:focus-visible h3 { text-decoration: underline; }
+  .work p { color: var(--mid); margin: 0; }
+
+  /* Brands: one row, wraps on narrow screens, 75% grey */
+  .brands { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--u) calc(var(--u) * 1.5); }
+  .brands img { width: auto; display: block; }
+
+  .link { font-size: var(--s2); line-height: calc(var(--u) * 1.25); font-weight: 700; }
+  footer { padding: calc(var(--u) * 4) 0 calc(var(--u) * 2); color: var(--mid); }
+  footer p { margin: 0; }
+
+  @media (max-width: 560px) {
+    :root { --u: 26px; }
+    main { padding-top: calc(var(--u) * 2); }
+    section { margin-top: calc(var(--u) * 3); }
+    footer { padding-top: calc(var(--u) * 3); }
+    .lead { font-size: 20px; }
+    .impact li { grid-template-columns: 1fr; gap: 0; }
+    .work { grid-template-columns: 1fr; gap: calc(var(--u) * 1.5); }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="name">Hannes Seeberg</p>
+    <h1>I design products, analyse the data and build the prototype.</h1>
+    <p class="lead">Hands-on designer with over 25 years of experience in product design, service design and accelerating change. I turn business goals and customer insight into tangible results through AI-led analysis, design and code.</p>
+  </header>
+
+  <section aria-labelledby="impact-title">
+    <h2 id="impact-title">Impact</h2>
+    <ul class="impact">
+      <li><span class="num">+200%</span><p>Monthly active users after I redesigned a scheduling tool for salespeople.</p></li>
+      <li><span class="num">15 → 3</span><p>Steps to share a meeting link. Same product, new setup flow.</p></li>
+      <li><span class="num">67%</span><p>Reply rate to my outreach messages when hiring designers at a growth-stage SaaS company.</p></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="work-title">
+    <h2 id="work-title">Recent work</h2>
+    <div class="work">
+      <article>
+        <a href="https://hseeberg.github.io/TreeLine/">
+          <img src="images/treeline.webp" width="1200" height="630" alt="TreeLine: a family tree shown on a timeline" loading="lazy">
+          <h3>TreeLine</h3>
+          <p>A web app that shows family trees on a timeline. Built with Claude Code.</p>
+        </a>
+      </article>
+      <article>
+        <a href="https://hseeberg.github.io/ride-hailing/">
+          <img src="images/ride-hailing.webp" width="1200" height="630" alt="Title slide: How could the number of overcharge tickets in ride-hailing be reduced?" loading="lazy">
+          <h3>Analysing ride-hailing data</h3>
+          <p>Exploratory analysis of about 5,000 rides that found pricing and GPS-quality anomalies.</p>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="brands-title">
+    <h2 id="brands-title">Where I have worked</h2>
+    <ul class="brands">
+      <li><img src="logos/nokia.webp" alt="Nokia" style="height:16px" width="93" height="16"></li>
+      <li><img src="logos/nortal.webp" alt="Nortal" style="height:30px" width="88" height="30"></li>
+      <li><img src="logos/pipedrive.webp" alt="Pipedrive" style="height:24px" width="110" height="24"></li>
+      <li><img src="logos/inbank.webp" alt="Inbank" style="height:28px" width="79" height="28"></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <a class="link" href="https://www.linkedin.com/in/seeberg/">LinkedIn: in/seeberg</a>
+  </section>
+
+</main>
+<footer>
+  <p>© 2026 Hannes Seeberg. Built hands-on with AI. V0.1.46</p>
+</footer>
+</body>
+</html>
