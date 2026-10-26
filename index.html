@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="version" content="V0.1.49">
+<meta name="version" content="V0.1.50">
 <title>Hannes Seeberg — Product designer</title>
 <meta name="description" content="Hands-on designer. 25+ years in product and service design.">
 <meta property="og:title" content="Hannes Seeberg — Product designer">
@@ -51,12 +51,13 @@
   .lead { font-size: var(--s2); line-height: calc(var(--u) * 1.25); max-width: 30em; margin: 0; }
   h2 { font-size: var(--s1); line-height: var(--u); font-weight: 700; margin: 0 0 var(--u); padding-bottom: calc(var(--u) / 4); border-bottom: 2px solid var(--ink); }
 
-  /* Impact */
-  .impact { list-style: none; padding: 0; margin: 0; }
-  .impact li { display: grid; grid-template-columns: 9em 1fr; gap: var(--u); align-items: baseline; padding: calc(var(--u) / 2) 0; border-bottom: 0.5px solid var(--ink); }
-  .impact li:first-child { padding-top: 0; }
-  .impact .num { font-size: var(--s3); font-weight: 700; line-height: calc(var(--u) * 1.5); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .impact p { margin: 0; }
+  /* Impact: 3 columns, vertical hairlines between (keisen). Number → text gap = 1 line (--u). */
+  .impact { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .impact li { padding: 0 var(--u); border-left: 0.5px solid var(--ink); }
+  .impact li:first-child { padding-left: 0; border-left: 0; }
+  .impact li:last-child { padding-right: 0; }
+  .impact .num { display: block; font-size: var(--s3); font-weight: 700; line-height: calc(var(--u) * 1.5); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .impact p { margin: var(--u) 0 0; }
 
   /* Recent work */
   .work { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--u); }
@@ -81,7 +82,10 @@
     section { margin-top: calc(var(--u) * 3); }
     footer { padding-top: calc(var(--u) * 3); }
     .lead { font-size: 20px; }
-    .impact li { grid-template-columns: 1fr; gap: 0; }
+    .impact { grid-template-columns: 1fr; }
+    .impact li, .impact li:first-child { padding: var(--u) 0; border-left: 0; border-top: 0.5px solid var(--ink); }
+    .impact li:first-child { border-top: 0; padding-top: 0; }
+    .impact p { margin-top: calc(var(--u) / 2); }
     .work { grid-template-columns: 1fr; gap: calc(var(--u) * 1.5); }
   }
 </style>
@@ -141,7 +145,7 @@
 
 </main>
 <footer>
-  <p>© 2026 Hannes Seeberg. Built hands-on with AI. V0.1.49</p>
+  <p>© 2026 Hannes Seeberg. Built hands-on with AI. V0.1.50</p>
 </footer>
 </body>
 </html>
